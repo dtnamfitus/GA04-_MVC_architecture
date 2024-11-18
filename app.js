@@ -33,15 +33,17 @@ const products = [
 
 
 // // Sử dụng body-parser
-// app.use(bodyParser.urlencoded({ extended: false }));
+ app.use(bodyParser.urlencoded({ extended: false }));
 
 
+// Trang chủ với thanh navbar
 app.get('/', (req, res) => {
   res.render('index', { products });
 });
 
+// Trang danh sách sản phẩm
 app.get('/productlist', (req, res) => {
-  res.render('productList', { products });
+  res.render('products/productList', { products }); // Chỉ rõ đường dẫn trong thư mục products
 });
 
 // Trang chi tiết sản phẩm
@@ -50,12 +52,11 @@ app.get('/products/:id', (req, res) => {
   const product = products.find(p => p.id === productId); // Tìm sản phẩm theo ID
 
   if (product) {
-    res.render('productDetail', { product });
+    res.render('products/productDetail', { product });
   } else {
     res.status(404).send('Không tìm thấy sản phẩm!');
   }
 });
-
 // Định nghĩa các tuyến đường ở đây
 var server = app.listen(3000, function () {
   var host = server.address().address;
