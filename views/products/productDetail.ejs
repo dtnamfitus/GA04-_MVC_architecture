@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="/style.css"> <!-- Tham chiếu file CSS (nếu có) -->
+</head>
+<body>
+  <h1>Chi tiết sản phẩm</h1>
+
+  <div class="product-detail">
+    <img src="<%= product.image %>" alt="<%= product.name %>" width="300">
+    <h2><%= product.name %></h2>
+    <p><strong>Giá:</strong> <%= product.price %> VND</p>
+    <p><strong>Mô tả:</strong> Đây là sản phẩm tuyệt vời của chúng tôi.</p>
+  </div>
+
+  <a href="/products">Quay lại danh sách sản phẩm</a>
+</body>
+</html>
