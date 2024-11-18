@@ -12,5 +12,12 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
-  }
+  },
+  "name": "ga04-_mvc_architecture",
+  "version": "1.0.0",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
