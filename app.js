@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Kết nối tới MongoDB
-mongoose.connect('mongodb://localhost:27017/myapp', {
+mongoose.connect('mongodb://localhost:27017/GA04-_MVC_architecture', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
