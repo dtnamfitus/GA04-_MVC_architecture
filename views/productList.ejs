@@ -1,0 +1,17 @@
+<!-- views/productList.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danh Sách Sản Phẩm</title>
+</head>
+<body>
+  <h1>Danh Sách Sản Phẩm</h1>
+  <ul>
+    <% products.forEach(function(product){ %>
+      <li>
+        <a href="/products/<%= product._id %>"><%= product.name %></a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
